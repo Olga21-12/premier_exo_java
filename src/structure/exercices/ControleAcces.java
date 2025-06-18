@@ -8,7 +8,7 @@ public class ControleAcces {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("===Control d'accès Discothèque===");
+        System.out.println("===Contrôle d'accès Discothèque===");
 
         System.out.print("Votre nom complet : ");
         String nom = in.nextLine();
@@ -23,6 +23,7 @@ public class ControleAcces {
             System.out.println("Accès refusé ! Revenez dans quelques années " + nom);
         }
 
-
+        String message = (age >= 18) ? "Vous êtes majeur" : "Vous êtes mineur";
+        System.out.println(message);
     }
 }
