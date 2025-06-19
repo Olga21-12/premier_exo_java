@@ -8,12 +8,16 @@ public class SelectionFruits {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Fruits disponibles :");
-        System.out.println("🍎 pomme");
-        System.out.println("🍌 banane");
-        System.out.println("🍊 orange");
-        System.out.println("🍓 fraise");
-        System.out.println("🥝 kiwi");
+        // utilisez bloc de String)
+        System.out.println("""
+                Fruits disponibles :
+                    🍎 pomme
+                    🍌 banane
+                    🍊 orange
+                    🍓 fraise
+                    🥝 kiwi
+                """);
+
 
         System.out.print("Quel est votre fruit préféré ? ");
         String fruit = in.nextLine().toLowerCase();
@@ -43,7 +47,7 @@ public class SelectionFruits {
             default -> System.out.println("Désolé, nous n'avons pas " + fruit + " dans notre sélection 😒");
         }
 
-        String[] fruitsDispo = {"pomme🍎", "banane🍌", "orange🍊", "fraise🍓", "kiwi🥝"};
+        String[] fruitsDispo = new String[]{"pomme🍎", "banane🍌", "orange🍊", "fraise🍓", "kiwi🥝"};
         System.out.println("\nTableau de fruits :");
         for (String fr : fruitsDispo) {
             System.out.println("- " + fr);
